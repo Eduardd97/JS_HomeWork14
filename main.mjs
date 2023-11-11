@@ -78,7 +78,7 @@ function renderUsers (users) {
             <img alt="${fullname}" src="${pictureURL}" class="user-avatar"/>
             <div>
                 <h3>${fullname}</h3>
-                <h4>${salary}</h4>
+                <h4>${salary}$</h4>
                 <span>${location}, ${city}</span>
             </div>
             <div class="technologies">
