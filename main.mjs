@@ -1,10 +1,3 @@
-// 2. Завдання:
-// - На базі коду з уроку (наша практична) зробіть пошук користувачів за країною (location)
-// - Стилізуйте все що вважаєте за потрібне ✨
-
-
-
-
 import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
 import { v4 as uuidv4 } from 'https://cdn.skypack.dev/uuid';
 
