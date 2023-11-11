@@ -1,0 +1,42 @@
+@media (max-width: 1280px) {
+    body {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 1080px) {
+    .scroll-arrow {
+        opacity: 0.9;
+        background: gray
+    }
+    .scroll-arrow:hover {
+        background: whitesmoke
+    }
+}
+
+@media (max-width: 670px) {
+    input {
+        width: 50%;
+        padding: 0 0 0 10px;
+    }
+    input::placeholder {
+        font-size: 13px;
+    }
+    .user-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .user-item div {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 17px;
+    }
+    .user-item div h3, div h4 {
+        margin: 0;
+    }
+
+}

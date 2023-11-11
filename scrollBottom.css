@@ -1,0 +1,25 @@
+.scroll-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+    background: white;
+    border-radius: 20px;
+  }
+#scroll-to-top {
+    top: 165px;
+}
+#scroll-to-bottom {
+    bottom: 20px;
+}
+  
+.scroll-arrow:hover {
+    opacity: 1;
+}
