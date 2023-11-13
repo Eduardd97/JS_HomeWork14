@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://bogatyr.club/uploads/posts/2023-03/1679510932_bogatyr-club-p-chernii-fon-dlya-editov-krasivo-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 180px;
+    background-image: url(https://klike.net/uploads/posts/2022-11/1668932411_2.jpg);
+}
+
+header .title {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    color: whitesmoke;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    
+}
+
+.navigation a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navigation a:hover {
+    text-decoration:overline;
+    color: brown;
+}
+
+.menu-language span {
+    font-size: 16px;
+}
+
+.menu-language svg {
+    padding-left: 20px;
+    width: 15px;
+    height: auto;
+    cursor: pointer;
+}
+
+.language {
+    display: none;
+}
+
+.language div {
+    margin-bottom: 10px;
+}
+
+.language img {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+}
