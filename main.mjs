@@ -70,11 +70,11 @@ searchButton.onclick = () => {
 function renderUsers (users) {
     usersWrapper.innerHTML = "";
 
-    users.forEach((users) =>{
+    users.forEach((users, i) =>{
         const { fullname, city, location, pictureURL, salary, technologies } = users;
         usersWrapper.innerHTML += `
             
-        <div class="user-item">
+        <div class="user-item" id="user-${i}">
             <img alt="${fullname}" src="${pictureURL}" class="user-avatar"/>
             <div>
                 <h3>${fullname}</h3>
@@ -86,7 +86,23 @@ function renderUsers (users) {
             </div>
         </div>
         `;
-    })
+        // <button class = "delete-user-buttom" id="delete-user-${i}">Delete</button>
+        // const deleteButtom = document.querySelector(`delete-user`)
+
+        const deleteButtom = document.createElement("button");
+        
+        console.log(deleteButtom, "deleteButtom");
+        
+        deleteButtom.textContent = "Delete"
+
+        deleteButtom.onclick = () => {
+            console.log(`delete user:`, users);
+        };  
+        
+        
+        const userElement = document.getElementById(`user-${i}`);
+        userElement.appendChild(deleteButtom);
+    });
 }
 
 
