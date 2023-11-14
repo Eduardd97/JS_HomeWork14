@@ -9,13 +9,40 @@ body {
 header {
     position: fixed;
     width: 100%;
-    height: 180px;
+    height: 188px;
     background-image: url(https://klike.net/uploads/posts/2022-11/1668932411_2.jpg);
 }
 
-header .title {
+.users {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 10px 20px 0 0;
+    color: whitesmoke;
+}
+
+.users a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.users a:hover:first-of-type {
+    text-decoration: overline;
+    color:darkslateblue;
+}
+
+.users a:hover {
+    text-decoration: underline;
+    color: brown;
+}
+
+.title {
     text-align: center;
     color: whitesmoke;
+}
+
+.title h1 {
+    margin: 0px 0 15px;;
 }
 
 .content {
@@ -36,23 +63,6 @@ section {
     gap: 15px;
 }
 
-.navigation {
-    display: flex;
-    gap: 30px;
-    font-size: 18px;
-    
-}
-
-.navigation a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.navigation a:hover {
-    text-decoration:overline;
-    color: brown;
-}
-
 .menu-language span {
     font-size: 16px;
 }
@@ -66,10 +76,6 @@ section {
 
 .language {
     display: none;
-}
-
-.language div {
-    margin-bottom: 10px;
 }
 
 .language img {

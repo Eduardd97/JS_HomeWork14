@@ -1,0 +1,16 @@
+.navigation {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navigation a:hover {
+    text-decoration:overline;
+    color: brown;
+}
