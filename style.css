@@ -79,7 +79,7 @@ button {
 
 button:hover {
     width: 25%;
-    background-color: #fff; 
+    background-color: rgba(108, 0, 0, 0.73); 
     color: black; 
     opacity: 1;
 }
