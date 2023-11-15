@@ -65,7 +65,7 @@ input::placeholder {
     color: #ccd3d4;
 }
 
-button {
+.input-wrapper button, .user-item button {
     width: 20%;
     height: 35px;
     cursor: pointer;
@@ -77,8 +77,14 @@ button {
     color: whitesmoke;
 }
 
-button:hover {
+.input-wrapper button:hover {
     width: 25%;
+    background-color: rgba(108, 0, 0, 0.73); 
+    color: black; 
+    opacity: 1;
+}
+
+.user-item button:hover {
     background-color: rgba(108, 0, 0, 0.73); 
     color: black; 
     opacity: 1;

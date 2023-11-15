@@ -1,6 +1,8 @@
 import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
 import { v4 as uuidv4 } from 'https://cdn.skypack.dev/uuid';
 
+
+
 const userQuantity = 100;
 
 function generateUser() {
@@ -65,43 +67,42 @@ searchButton.onclick = () => {
     }
 };
 
-
-
 function renderUsers (users) {
     usersWrapper.innerHTML = "";
 
-    users.forEach((users, i) =>{
-        const { fullname, city, location, pictureURL, salary, technologies } = users;
-        usersWrapper.innerHTML += `
-            
-        <div class="user-item" id="user-${i}">
-            <img alt="${fullname}" src="${pictureURL}" class="user-avatar"/>
-            <div>
-                <h3>${fullname}</h3>
-                <h4>${salary}$</h4>
-                <span>${location}, ${city}</span>
+    users.forEach((user, i) =>{
+        const {id, fullname, city, location, pictureURL, salary, technologies } = user;
+        usersWrapper.innerHTML += 
+        `
+            <div class="user-item" id="user-${id}">
+                <img alt="${fullname}" src="${pictureURL}" class="user-avatar"/>
+                <div>
+                    <h3>${fullname}</h3>
+                    <h4>${salary}$</h4>
+                    <span>${location}, ${city}</span>
+                </div>
+                <div class="technologies">
+                    ${technologies.map((tech) => `<span>${tech}</span>`).join("")}
+                </div>
             </div>
-            <div class="technologies">
-                ${technologies.map((tech) => `<span>${tech}</span>`).join("")}
-            </div>
-        </div>
         `;
-        // <button class = "delete-user-buttom" id="delete-user-${i}">Delete</button>
-        // const deleteButtom = document.querySelector(`delete-user`)
 
-        const deleteButtom = document.createElement("button");
-        
-        console.log(deleteButtom, "deleteButtom");
-        
-        deleteButtom.textContent = "Delete"
-
-        deleteButtom.onclick = () => {
-            console.log(`delete user:`, users);
-        };  
-        
-        
-        const userElement = document.getElementById(`user-${i}`);
-        userElement.appendChild(deleteButtom);
+        setTimeout(() => {
+            const deleteButton = document.createElement("button");     
+            deleteButton.textContent = "Delete";
+      
+            deleteButton.onclick = () => {
+                console.log(`Delete user:`, user);
+            
+                // HW
+                const updatedUsers = USERS.filter((deleteUserById) => deleteUserById.id !== id);
+                
+                renderUsers(updatedUsers);                               
+            };
+      
+            const userElement = document.getElementById(`user-${id}`);
+            userElement.appendChild(deleteButton);
+        }, 1000);
     });
 }
 
