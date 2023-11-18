@@ -26,13 +26,20 @@ main .input-wrapper {
 
 }
 
-.users {
+.input-wrapper-box {
+    padding: 10px 0 0px 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.users {
     display: flex;
     justify-content: end;
     gap: 10px;
-    padding: 10px 30px 0 0;
     color: whitesmoke;
+    padding-right: 150px;
 }
 
 .users a {
@@ -50,7 +57,7 @@ main .input-wrapper {
     color: brown;
 }
 
-input {
+#search-input {
     width: 35%;
     height: 35px;
     border-radius: 15px;
@@ -60,7 +67,7 @@ input {
     border: 1px solid white;
 }
 
-input::placeholder {
+#search-input::placeholder {
     font-size: 14px;
     color: #ccd3d4;
 }
@@ -84,12 +91,39 @@ input::placeholder {
     opacity: 1;
 }
 
+
+
+.sort-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.sort-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-wrapper label input {
+    appearance: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid whitesmoke;
+}
+
+.sort-wrapper label input:checked {
+    background-color: brown;
+}
+
 .user-item button:hover {
-    background-color: rgba(108, 0, 0, 0.73); 
+    background-color: rgba(162, 0, 0, 0.578);  
     color: black; 
     opacity: 1;
 }
-
 
 #users-wrapper {
     width: 60%;
@@ -97,7 +131,7 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin: 200px 0 0 0;
+    margin: 270px 0 0 0;
 }
 
 .user-item {
