@@ -12,6 +12,7 @@ function generateUser() {
         city: faker.location.city(),
         location: faker.location.country(),
         salary: faker.number.int({min: 500, max: 5000}),
+        age: faker.number.int({min: 16, max: 70}),
         technologies: faker.helpers.arrayElements([
             "JavaScript",
             "HTML",
@@ -46,6 +47,42 @@ const searchButton = document.getElementById("search-button");
 
 const usersWrapper = document.getElementById("users-wrapper");
 
+const sortBySalaryInput = document.getElementById("sort-by-salary");
+const sortByAgeInput = document.getElementById("sort-by-age")
+
+const sortBy = () => {
+    if (sortBySalaryInput.checked) {
+        const usersToSortSalary = [... USERS];
+
+        const sortedUsersSalary = usersToSortSalary.sort((user1, user2) => user1.salary - user2.salary);
+
+        renderUsers(sortedUsersSalary)
+    } else if (sortByAgeInput.checked) {
+        const usersToSortAge = [... USERS];
+
+        const sortedUsersAge = usersToSortAge.sort((user1, user2) => user1.age - user2.age);
+
+        renderUsers(sortedUsersAge);
+    } else {
+        renderUsers(USERS);
+    }
+}
+
+sortBySalaryInput.onchange = sortBy;
+sortByAgeInput.onchange = sortBy;
+
+// // sortByAgeInput.onchange = () => {
+// //     if (sortByAgeInput.checked) {
+// //         const usersToSort = [... USERS];
+
+// //         const sortedUsersAge = usersToSort.sort((user1, user2) => user1.age - user2.age);
+
+// //         renderUsers(sortedUsersAge);
+// //     } else {
+// //         renderUsers(USERS);
+// //     }
+// }
+
 let searchResults = null;
 
 searchButton.onclick = () => {
@@ -71,15 +108,15 @@ function renderUsers (users) {
     usersWrapper.innerHTML = "";
 
     users.forEach((user, i) =>{
-        const {id, fullname, city, location, pictureURL, salary, technologies } = user;
+        const {id, fullname, city, location, pictureURL, salary, age, technologies } = user;
         usersWrapper.innerHTML += 
         `
             <div class="user-item" id="user-${id}">
                 <img alt="${fullname}" src="${pictureURL}" class="user-avatar"/>
                 <div>
-                    <h3>${fullname}</h3>
+                    <h3>${fullname}, &nbsp ${age} лет </h3>
                     <h4>${salary}$</h4>
-                    <span>${location}, ${city}</span>
+                    <span>${location}, &nbsp ${city}</span>
                 </div>
                 <div class="technologies">
                     ${technologies.map((tech) => `<span>${tech}</span>`).join("")}

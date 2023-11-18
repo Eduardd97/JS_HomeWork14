@@ -12,19 +12,31 @@
 <body>
     <main>
         <div class="input-wrapper">
-            <div class="users">
-                <a href="#">Зарегестрироватся</a>
-                <span>|</span>
-                <a href="#">Войти</a>
-             </div>
-            <nav class="navigation">
-                <a href="/main.html">Главная</a>
-                <a href="/index.html">Работодателям</a>
-                <a href="#">Вакансии</a>
-                <a href="#">Новости IT</a>
-            </nav>
+            <div class="input-wrapper-box">
+                <nav class="navigation">
+                    <a href="/main.html">Главная</a>
+                    <a href="/index.html">Работодателям</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">Новости IT</a>
+                </nav>
+                <div class="users">
+                    <a href="#">Зарегестрироватся</a>
+                    <span>|</span>
+                    <a href="#">Войти</a>
+                 </div>
+            </div>
             <input type="text" id="search-input" placeholder="Введите данные для поиска: ">
             <button type="button" id="search-button">Search</button>
+            <div class="sort-wrapper">
+                <label for="sort-by-salary">
+                    <input type="checkbox" id="sort-by-salary" />
+                    <span>Сортировать по зарплате</span>
+                </label>
+                <label for="sort-by-age">
+                    <input type="checkbox" id="sort-by-age" />
+                    <span>Сортировать по возрасту</span>
+                </label>
+            </div>
         </div>
         <div id="users-wrapper"></div>
         <div id="scroll-to-top" class="scroll-arrow">&#8593;</div>
